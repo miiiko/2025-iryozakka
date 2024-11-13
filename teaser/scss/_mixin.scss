@@ -1,0 +1,350 @@
+@use "_vars.scss" as v;
+@use "sass:math";
+
+@mixin clearfix() {
+  *zoom: 1;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+
+
+@mixin size-scale($properties, $minWidth, $maxWidth, $minValue, $maxValue) {
+  @each $property in $properties {
+    #{$property}: $minValue;
+  }
+
+  @media (min-width: $minWidth) {
+    @each $property in $properties {
+      #{$property}: calc(#{$minValue} + #{strip-unit($maxValue - $minValue)} * (100vw - #{$minWidth}) / #{strip-unit($maxWidth - $minWidth)});
+    }
+  }
+
+  @media (min-width: $maxWidth) {
+    @each $property in $properties {
+      #{$property}: $maxValue;
+    }
+  }
+}
+
+@function strip-unit($number) {
+  @if type-of($number)=="number" and not unitless($number) {
+    @return math.div($number , ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+@mixin minwidth() {
+  min-width: initial;
+
+  @media all and (-ms-high-contrast: none) {
+    min-width: none;
+  }
+}
+
+@mixin maxwidth() {
+  max-width: initial;
+
+  @media all and (-ms-high-contrast: none) {
+    max-width: none;
+  }
+}
+
+@mixin content-center($w: $content-w) {
+  width: $w;
+  margin: 0 auto;
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin hover-opacity() {
+  transition: opacity 0.2s;
+
+  &:hover,
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@mixin hover-color($color) {
+  transition: color 0.2s;
+
+  &:hover,
+  &:active {
+    color: $color;
+  }
+}
+
+@mixin abs_top-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin abs_top() {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin abs_left() {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin rel_top-center() {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin rel_top() {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin rel_left() {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+//参考：https://www.himpfen.com/border-image-sass-mixin/
+@mixin border-image($source, $slice, $width, $outset, $repeat) {
+  border-image-source: url($source);
+  border-image-slice: $slice;
+  border-image-width: $width;
+  border-image-outset: $outset;
+  border-image-repeat: $repeat;
+  -webkit-border-image: url($source) $slice $width $outset $repeat;
+  -o-border-image: url($source) $slice $width $outset $repeat;
+}
+
+
+//参考：https://www.nxworld.net/tips/css-hover-underline-animation-examples-and-sass-mixin.html
+@mixin hover-underline($type: fade, $dir: null, $weight: 1px, $color: #2d2d2d) {
+  @if $dir ==null {
+    @if $type ==fade {
+      $dir: 'top';
+    }
+
+    @else if $type ==slide {
+      $dir: 'center';
+    }
+  }
+
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: $weight;
+    background: $color;
+
+    @if $type ==fade {
+      transition: .3s;
+      opacity: 0;
+      visibility: hidden;
+
+      @if $dir ==bottom {
+        bottom: $weight * -4;
+      }
+
+      @else {
+        bottom: $weight;
+      }
+    }
+
+    @else if $type ==slide {
+      bottom: $weight * -2;
+      transform: scale(0, 1);
+      transition: transform .3s;
+
+      @if $dir ==left-right or $dir ==right-in-left {
+        transform-origin: left top;
+      }
+
+      @else if $dir ==right-left or $dir ==left-in-right {
+        transform-origin: right top;
+      }
+
+      @else {
+        transform-origin: center top;
+      }
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:hover::after {
+    @if $type ==fade {
+      bottom: $weight * -2;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @else if $type ==slide {
+      @if $dir ==left-in-right {
+        transform-origin: left top;
+      }
+
+      @else if $dir ==right-in-left {
+        transform-origin: right top;
+      }
+
+      transform: scale(1, 1);
+    }
+  }
+}
+
+
+// https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html 
+//
+// grayscale      ex: filter: grayscale(100%);
+// sepia          ex: filter: sepia(100%);
+// saturate       ex: filter: saturate(0%);
+// hue-rotate     ex: filter: hue-rotate(45deg);
+// invert         ex: filter: invert(100%);
+// brightness     ex: filter: brightness(15%);
+// contrast       ex: filter: contrast(200%);
+// blur           ex: filter: blur(2px);
+
+@mixin filter($filter-type, $filter-amount) {
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+//参考：http://caramu.com/tips/css/【sass】【css3】画像にscaleを使ってホバーアニメーショ/
+@mixin imgscale($scale-x : 1, $scale-y: 1) {
+  -webkit-transform: scale($scale-x, $scale-y);
+  -moz-transform: scale($scale-x, $scale-y);
+  -o-transform: scale($scale-x, $scale-y);
+  -ms-transform: scale($scale-x, $scale-y);
+  transform: scale($scale-x, $scale-y);
+}
+
+//参考：http://caramu.com/tips/css/【sass】【css3】ハンバーガーボタンに動きをつける/
+@mixin anime {
+  -moz-transition: -moz-transform 0.5s linear;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  -o-transition: -o-transform 0.5s linear;
+  -ms-transition: -ms-transform 0.5s linear;
+  transition: transform 0.5s linear;
+}
+
+@mixin absolute-top-left($top: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin absolute-top-right($top: 0, $right: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin absolute-bottom-left($bottom: 0, $left: 0) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin absolute-bottom-right($bottom: 0, $right: 0) {
+  position: absolute;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin easeOutExpo($speed) {
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-duration: $speed;
+}
+
+@mixin easeOutQuint($speed) {
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  transition-duration: $speed;
+}
+
+@mixin easeOutQuart($speed) {
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-duration: $speed;
+}
+
+@mixin easeOutCubic($speed) {
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-duration: $speed;
+}
+
+@mixin easeOutQuad($speed) {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-duration: $speed;
+}
+
+@mixin easeOutSine($speed) {
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition-duration: $speed;
+}
+
+@mixin easeOutCirc($speed) {
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: $speed;
+}
+
+@mixin easeOutBack($speed) {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: $speed;
+}
+
+@mixin easeInOutQuint($speed) {
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-duration: $speed;
+}
+
+@mixin easeInOutExpo($speed) {
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition-duration: $speed;
+}
+
+@mixin easeInOutQuart($speed) {
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  transition-duration: $speed;
+}

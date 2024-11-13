@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img,
+embed,
+iframe,
+object,
+audio,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  vertical-align: top;
+}
+
+input {
+  border: 0 none;
+  border-radius: 0;
+  outline: 0 none;
+  vertical-align: middle;
+}
+
+input[type=submit] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent none repeat scroll 0 0;
+  border-radius: 0;
+  margin: 0;
+  border: none;
+  outline: medium none;
+  text-overflow: ellipsis;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   base
+   ========================================================================== */
+body {
+  color: 16px;
+  font-family: "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
+a {
+  color: 16px;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.7;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: linear 0.5s;
+  transition: linear 0.5s;
+}
+
+@media screen and (max-width: 840px) {
+  .pc {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+}
+@media screen and (max-width: 420px) {
+  .sp {
+    display: block;
+  }
+}
+
+/* ---------
+ header
+ --------- */
+/* ---------
+ main
+ --------- */
+main {
+  display: block;
+}
+
+/* ---------
+ footer
+ --------- */
