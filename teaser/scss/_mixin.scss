@@ -17,6 +17,49 @@
   }
 }
 
+@mixin w-contents() {
+  width: 800px;
+  @media screen and (max-width: v.$tab) {
+    width: 90%;
+  }
+}
+
+
+
+// font-size
+
+@mixin ttl-lv1() {
+  font-size: 28px;
+  @media screen and (max-width: v.$tab) {
+    font-size: 22px;
+  }
+}
+
+@mixin ttl-lv2() {
+  font-size: 20px;
+  @media screen and (max-width: v.$tab) {
+    font-size: 18px;
+  }
+}
+
+@mixin txt() {
+  font-size: 16px;
+  @media screen and (max-width: v.$tab) {
+    font-size: 14px;
+  }
+}
+
+@mixin txt-mini() {
+  font-size: 14px;
+  @media screen and (max-width: v.$tab) {
+    font-size: 12px;
+  }
+}
+
+@mixin txt-micro() {
+  font-size: 10px;
+}
+
 
 
 @mixin size-scale($properties, $minWidth, $maxWidth, $minValue, $maxValue) {

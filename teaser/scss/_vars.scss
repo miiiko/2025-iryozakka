@@ -1,28 +1,17 @@
 //テキスト
-$txt : #000;
+$txt : #304E4C;
 
 //白
 $white: #fff;
 
+$base: #FFF1E0;
+$secondary: #00CCBB;
+$secondary-dark: #00A597;
+$accent: #FF7733;
 
-// font-size
-
-$ttl-lv1: 28px;
-$ttl-lv2: 20px;
-$txt: 16px;
-$txt-mini: 14px;
-$txt-micro: 10px;
-
-// sp時のフォントサイズ設定
-// $ttl-lv1: 22px;
-// $ttl-lv2: 18px;
-// $txt: 14px;
-// $txt-mini: 12px;
-// $txt-micro: 10px;
-
-
+$shadow: 0px 4px 4px 0px rgba($txt, .5);
 
 // レスポンシブ
-
+$header: 900px;
 $tab: 840px;
-$sp: 420px;
+$sp: 580px;

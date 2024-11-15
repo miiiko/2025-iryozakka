@@ -141,9 +141,10 @@ button {
 
 body {
     color: v.$txt;
-    font-family: "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-family: mamelon, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     font-weight: 300;
     font-size: 1.2em;
+    background: v.$base;
 }
 a {
     color: v.$txt;
