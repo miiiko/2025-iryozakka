@@ -2,6 +2,157 @@
 @use "_mixin.scss"as m;
 
 /* ---------
+ header
+ --------- */
+
+.header{
+	background: v.$white;
+	&.fix{
+		background: transparent;
+		position: fixed;
+		top: 3%;
+		width: 100%;
+		z-index: 20;
+	}
+	@include m.max-screen(v.$sp) {
+		position: absolute;
+		background: transparent;
+		display: none;
+		&.fix{
+			display: block;
+			position: fixed;
+		}
+	}
+	&_box{
+		width: 900px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		justify-content: center;
+		padding: 0 16px;
+		@include m.max-screen(v.$header) {
+			width: 90%;
+		}
+		@include m.max-screen(v.$sp) {
+			padding: 0 8px;
+			gap: 8px;
+			justify-content: space-between;
+		}
+		.logo{
+			height: 48px;
+			img{
+				height: 100%;
+			}
+		}
+		.toggle{
+			display: none;
+			@include m.max-screen(v.$sp) {
+				display: block;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				background: v.$secondary-dark;
+				position: relative;
+				cursor: pointer;
+				span{
+					height: 1px;
+					background: v.$white;
+					width: 60%;
+					position: absolute;
+					left:20%;
+					transition: linear .5s;
+					&:nth-last-of-type(1){
+						top: 40%;
+					}
+					&:nth-last-of-type(2){
+						top: 60%;
+					}
+				}
+				&.on{
+					span{
+						transition: linear .5s;
+						&:nth-last-of-type(1){
+							top: 50%;
+						}
+						&:nth-last-of-type(2){
+							top: 50%;
+						}
+					}
+				}
+			}
+		}
+		.nav{
+			display: flex;
+			align-items: center;
+			@include m.max-screen(v.$sp) {
+				display: none;
+				position: absolute;
+				width: 80vw;
+				top: 100%;
+				right: 5%;
+				padding: 5%;
+				border: 1px solid v.$secondary-dark;
+				background: v.$white;
+				border-radius: 16px;
+			}
+			&_link{
+				display: flex;
+				align-items: center;
+				background: rgba(v.$white, .75);
+				border-radius: 32px;
+				padding: 24px;
+				gap: 24px;
+				@include m.txt();
+				@include m.max-screen(v.$tab) {
+					padding: 16px;
+					gap: 16px;
+				}
+				@include m.max-screen(v.$sp) {
+					padding: 8px 16px;
+					display: block;
+					border-radius: 0;
+					> li{
+						margin-bottom: 3%;
+						&:last-of-type{
+							margin-bottom: 0;
+						}
+						a{
+							display: block;
+						}
+					}
+				}
+			}
+			&_button{
+				> li{
+					> a{
+						border-radius: 20px;
+						color: v.$white;
+						@include m.txt-mini();
+						display: block;
+						padding: 10px 36px;
+						box-shadow: v.$shadow;
+						@include m.max-screen(v.$tab) {
+							padding: 8px 24px;
+						}
+						@include m.max-screen(v.$sp) {
+							width: 60%;
+							margin: 0 auto;
+							text-align: center;
+						}
+					}
+					&.contact{
+						a{
+							background: v.$secondary-dark;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ---------
  main
  --------- */
 main{
@@ -108,152 +259,6 @@ main{
 				}
 			}
 			
-		}
-	}
-	.header{
-		background: v.$white;
-		&.fix{
-			background: transparent;
-			position: fixed;
-			top: 3%;
-			width: 100%;
-			z-index: 20;
-		}
-		@include m.max-screen(v.$sp) {
-			position: absolute;
-			background: transparent;
-			display: none;
-			&.fix{
-				display: block;
-				position: fixed;
-			}
-		}
-		&_box{
-			width: 900px;
-			margin: 0 auto;
-			display: flex;
-			align-items: center;
-			gap: 16px;
-			justify-content: center;
-			padding: 0 16px;
-			@include m.max-screen(v.$header) {
-				width: 90%;
-			}
-			@include m.max-screen(v.$sp) {
-				padding: 0 8px;
-				gap: 8px;
-				justify-content: space-between;
-			}
-			.logo{
-				height: 48px;
-				img{
-					height: 100%;
-				}
-			}
-			.toggle{
-				display: none;
-				@include m.max-screen(v.$sp) {
-					display: block;
-					width: 40px;
-					height: 40px;
-					border-radius: 50%;
-					background: v.$secondary-dark;
-					position: relative;
-					cursor: pointer;
-					span{
-						height: 1px;
-						background: v.$white;
-						width: 60%;
-						position: absolute;
-						left:20%;
-						transition: linear .5s;
-						&:nth-last-of-type(1){
-							top: 40%;
-						}
-						&:nth-last-of-type(2){
-							top: 60%;
-						}
-					}
-					&.on{
-						span{
-							transition: linear .5s;
-							&:nth-last-of-type(1){
-								top: 50%;
-							}
-							&:nth-last-of-type(2){
-								top: 50%;
-							}
-						}
-					}
-				}
-			}
-			.nav{
-				display: flex;
-				align-items: center;
-				@include m.max-screen(v.$sp) {
-					display: none;
-					position: absolute;
-					width: 80vw;
-					top: 100%;
-					right: 5%;
-					padding: 5%;
-					border: 1px solid v.$secondary-dark;
-					background: v.$white;
-					border-radius: 16px;
-				}
-				&_link{
-					display: flex;
-					align-items: center;
-					background: rgba(v.$white, .75);
-					border-radius: 32px;
-					padding: 24px;
-					gap: 24px;
-					@include m.txt();
-					@include m.max-screen(v.$tab) {
-						padding: 16px;
-						gap: 16px;
-					}
-					@include m.max-screen(v.$sp) {
-						padding: 8px 16px;
-						display: block;
-						border-radius: 0;
-						> li{
-							margin-bottom: 3%;
-							&:last-of-type{
-								margin-bottom: 0;
-							}
-							a{
-								display: block;
-							}
-						}
-					}
-				}
-				&_button{
-					> li{
-						> a{
-							border-radius: 20px;
-							color: v.$white;
-							@include m.txt-mini();
-							display: block;
-							padding: 10px 36px;
-							box-shadow: v.$shadow;
-							@include m.max-screen(v.$tab) {
-								padding: 8px 24px;
-							}
-							@include m.max-screen(v.$sp) {
-								width: 60%;
-								margin: 0 auto;
-								text-align: center;
-							}
-						}
-						&.contact{
-							a{
-								background: v.$secondary-dark;
-							}
-						}
-					}
-				}
-			}
 		}
 	}
 	.contents{
