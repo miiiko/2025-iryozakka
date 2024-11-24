@@ -150,7 +150,7 @@ a {
     color: v.$txt;
     text-decoration: none;
     &:hover{
-		opacity: .7;
+		color: v.$secondary;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;

@@ -147,7 +147,7 @@
   transform: translateY(-50%);
 }
 
-@mixin abs_left() {
+@mixin abs_center() {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -169,7 +169,7 @@
   transform: translateY(-50%);
 }
 
-@mixin rel_left() {
+@mixin rel_center() {
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);

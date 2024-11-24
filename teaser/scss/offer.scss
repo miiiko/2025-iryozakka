@@ -1,0 +1,147 @@
+@use "_vars.scss"as v;
+@use "_mixin.scss"as m;
+
+.contents{
+    .info{
+        margin-bottom: 24px;
+        @include m.max-screen(v.$tab) {
+            margin-bottom: 6%;
+        }
+        &:nth-last-child{
+            margin-bottom: 0;
+        }
+        &_box{
+            margin-top: 10px; 
+            &:last-of-type{
+                margin-bottom: 16px;
+            }
+        }
+        h4{
+            @include m.txt-mini();
+            background: linear-gradient(transparent 65%, rgba(v.$secondary, .5) 35%);
+            display: inline-block;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        h5{
+            font-weight: 300;
+            padding-left: .3em;
+            &::before{
+                content: '◆';
+                color: v.$secondary;
+                padding-right: 0.3em;
+            }
+        }
+        .label{
+            &_box{
+                display: flex;
+                column-gap: 18px;
+                margin-bottom: 10px;
+                align-items: baseline;
+                @include m.max-screen(v.$tab) {
+                    display: block;
+                    dt{
+                        display: inline-block;
+                    }
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            &.longttl{
+                .label_box{
+                    display: block;
+                    dt{
+                        display: inline-block;
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+            dt{
+                background: v.$secondary;
+                min-width: 71px;
+                min-height: 21px;
+                color: v.$white;
+                font-size: 12px;
+                text-align: center;
+                padding: 3px 4px;
+                @include m.max-screen(v.$tab) {
+                    margin-bottom: 1%;
+                }
+            }
+            dd{
+                @include m.txt-mini();
+                .map{
+                    display: inline-block;
+                    margin-left: 16px;
+                    &_icon{
+                        padding-right: 4px;
+                    }
+                    a{
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .price{
+            @include m.max-screen(v.$sp) {
+                overflow-x: auto;
+                display: block;
+            }
+            &_list{
+                width: 400px;
+                margin-bottom: 8px;
+                @include m.max-screen(v.$sp) {
+                    margin-bottom: 1%;
+                }
+            }
+            &_ttl{
+                border-bottom: 1px solid v.$secondary;
+                th{
+                    &:last-of-type{
+                        border-right: none;
+                    }
+                }
+            }
+            &_notice{
+                font-size: 12px;
+            }
+            th{
+                font-weight: 300;
+                vertical-align: baseline;
+            }
+            th, td{
+                border-right: 1px solid v.$secondary;
+                text-align: center;
+                padding: 8px 4px;
+            }
+            td{
+                &:last-of-type{
+                    border-right: none;
+                }
+                .size{
+                    font-size: 12px;
+                }
+            }
+        }
+        .disc{
+            list-style-type: '・';
+            padding-left: 1em;
+            @include m.txt-mini();
+            & + .notice{
+                margin-top: 10px;
+            }
+        }
+        .notice{
+            list-style-type: '※';
+            @include m.txt-mini();
+            padding-left: 1em;
+        }
+        .mini{
+            font-size: 12px;
+        }
+        .lead{
+            @include m.txt-mini();
+        }
+    }
+}

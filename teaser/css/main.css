@@ -148,7 +148,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  opacity: 0.7;
+  color: #00CCBB;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -186,9 +186,7 @@ a:hover {
 }
 @media screen and (max-width: 580px) {
   .header {
-    position: absolute;
-    background: transparent;
-    display: none;
+    padding: 2% 0;
   }
   .header.fix {
     display: block;
@@ -262,7 +260,7 @@ a:hover {
 .header_box .nav {
   display: flex;
   align-items: center;
-  column-gap: px;
+  column-gap: 32px;
 }
 @media screen and (max-width: 580px) {
   .header_box .nav {
@@ -348,145 +346,6 @@ a:hover {
 main {
   display: block;
 }
-main .main {
-  position: relative;
-  height: 100vh;
-}
-main .main_top {
-  background: url(../img/top/main_top.png) repeat-x top center/contain;
-  height: 30.078125vh;
-}
-@media screen and (max-width: 840px) {
-  main .main_top {
-    background-size: auto 100%;
-  }
-}
-@media screen and (max-width: 580px) {
-  main .main_top {
-    background: url(../img/top/main_top_sp.png) repeat-x top center/contain;
-  }
-}
-main .main_center {
-  background: url(../img/top/main_center.png) repeat-x center center/contain;
-  height: 45.117187vh;
-}
-@media screen and (max-width: 840px) {
-  main .main_center {
-    background-size: auto 100%;
-  }
-}
-@media screen and (max-width: 580px) {
-  main .main_center {
-    background: url(../img/top/main_center_sp.png) repeat-x center center/contain;
-  }
-}
-main .main_botton {
-  background: url(../img/top/main_bottn.png) repeat-x top center/contain;
-  height: 24.804688vh;
-}
-@media screen and (max-width: 840px) {
-  main .main_botton {
-    background-size: auto 100%;
-  }
-}
-@media screen and (max-width: 580px) {
-  main .main_botton {
-    background: url(../img/top/main_bottn_sp.png) repeat-x top center/contain;
-  }
-}
-main .main_box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 32px;
-  margin: 0 auto;
-  width: 800px;
-  padding: 30px 20px 50px;
-  text-align: center;
-  max-height: 80vh;
-}
-@media screen and (max-width: 840px) {
-  main .main_box {
-    width: 90%;
-  }
-}
-@media screen and (max-width: 840px) {
-  main .main_box {
-    padding: 3% 2% 5%;
-  }
-}
-main .main_box .ttl {
-  margin-bottom: 10px;
-  max-height: 32.079208vh;
-}
-@media screen and (max-width: 840px) {
-  main .main_box .ttl {
-    width: 80%;
-    margin: 0 auto 1%;
-  }
-}
-main .main_box .date {
-  font-size: 32px;
-  font-family: m-plus-rounded-2p, sans-serif;
-  font-weight: 900;
-  font-style: normal;
-  color: #FF7733;
-}
-@media screen and (max-width: 840px) {
-  main .main_box .date {
-    font-size: 26px;
-  }
-}
-@media screen and (max-width: 580px) {
-  main .main_box .date {
-    font-size: min(22px, 5vw);
-  }
-}
-main .main_box .line {
-  margin: 30px 0 24px;
-  border-top: 2px dotted #00A597;
-}
-@media screen and (max-width: 840px) {
-  main .main_box .line {
-    margin: 3% 0;
-  }
-}
-main .main_box .lead {
-  width: 480px;
-  margin: 0 auto;
-  max-height: 28.514851vh;
-}
-@media screen and (max-width: 840px) {
-  main .main_box .lead {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 580px) {
-  main .main_box .lead {
-    width: 80%;
-  }
-}
-main .main_box .lead_ttl {
-  padding-left: 40px;
-  margin-bottom: 30px;
-}
-@media screen and (max-width: 840px) {
-  main .main_box .lead_ttl {
-    margin-bottom: 3%;
-  }
-}
-main .main_box .lead_txt {
-  text-align: left;
-  font-size: 14px;
-}
-@media screen and (max-width: 840px) {
-  main .main_box .lead_txt {
-    font-size: 12px;
-  }
-}
 main .contents {
   position: relative;
   font-size: 16px;
@@ -495,25 +354,6 @@ main .contents {
   main .contents {
     font-size: 14px;
   }
-}
-main .contents .icon {
-  position: absolute;
-  z-index: 10;
-  top: calc(50vh - 88px);
-  right: 0;
-}
-@media screen and (max-width: 840px) {
-  main .contents .icon {
-    width: 100px;
-  }
-}
-@media screen and (max-width: 580px) {
-  main .contents .icon {
-    width: 70px;
-  }
-}
-main .contents .icon.fix {
-  position: fixed;
 }
 main .contents .inner {
   background: #fff;
@@ -585,86 +425,6 @@ main .contents .inner .button.gray {
 }
 main .contents .inner .button.gray a {
   pointer-events: none;
-}
-main .contents .offer {
-  background: #00CCBB;
-  padding: 24px 0 32px;
-}
-main .contents .offer .button {
-  margin: 34px auto 0;
-}
-main .contents .offer .inner .txt {
-  width: 700px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 840px) {
-  main .contents .offer .inner .txt {
-    width: auto;
-  }
-}
-main .contents .about {
-  padding: 24px 0 32px;
-}
-main .contents .about .inner .txt {
-  width: 700px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 840px) {
-  main .contents .about .inner .txt {
-    width: auto;
-  }
-}
-main .contents .outline {
-  background: #00A597;
-  padding: 24px 0 32px;
-}
-main .contents .outline .inner {
-  display: flex;
-  flex-direction: row-reverse;
-}
-@media screen and (max-width: 580px) {
-  main .contents .outline .inner {
-    display: block;
-  }
-}
-main .contents .outline .inner .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
-}
-@media screen and (max-width: 580px) {
-  main .contents .outline .inner .info {
-    margin: 0 auto;
-    width: auto;
-  }
-}
-main .contents .outline .inner .info .date dt {
-  font-size: 14px;
-  font-weight: 600;
-}
-@media screen and (max-width: 840px) {
-  main .contents .outline .inner .info .date dt {
-    font-size: 12px;
-  }
-}
-main .contents .outline .inner .info .date dd {
-  margin-bottom: 16px;
-}
-@media screen and (max-width: 840px) {
-  main .contents .outline .inner .info .button {
-    margin: 0 auto;
-  }
-}
-main .contents .outline .inner .map {
-  width: 50%;
-  text-align: center;
-}
-@media screen and (max-width: 580px) {
-  main .contents .outline .inner .map {
-    width: auto;
-    margin-bottom: 5%;
-  }
 }
 
 /* ---------
@@ -768,4 +528,109 @@ main .contents .outline .inner .map {
 .footer .copy {
   text-align: center;
   display: block;
+}
+
+.page .main {
+  background: #00A597;
+}
+.page .main_ttl {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  padding: 56px 24px 64px;
+  color: #fff;
+  position: relative;
+}
+@media screen and (max-width: 840px) {
+  .page .main_ttl {
+    padding: 6% 3% 7%;
+    font-size: 32px;
+  }
+}
+.page .main_ttl:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: url(../img/page/ttl_img.svg) no-repeat center center/contain;
+  height: 40px;
+  width: 530px;
+  bottom: 0;
+}
+@media screen and (max-width: 840px) {
+  .page .main_ttl:after {
+    width: 428px;
+    height: 32px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .page .main_ttl:after {
+    width: 322px;
+    height: 24px;
+  }
+}
+.page .contents {
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px 24px;
+  margin: 40px auto 62px;
+  width: 800px;
+  font-size: 16px;
+}
+@media screen and (max-width: 840px) {
+  .page .contents {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 840px) {
+  .page .contents {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .page .contents {
+    padding: 6% 5%;
+  }
+}
+.page .contents h3 {
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  padding-top: 34px;
+}
+@media screen and (max-width: 840px) {
+  .page .contents h3 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .page .contents h3 {
+    padding-top: 26px;
+  }
+}
+.page .contents h3:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 0;
+  background: url(../img/page/icon_green.png) no-repeat center center/contain;
+  width: 35px;
+  height: 30px;
+}
+@media screen and (max-width: 840px) {
+  .page .contents h3:before {
+    width: 24px;
+    height: 28px;
+  }
+}
+.page .contents h3 + .lead {
+  margin: 24px auto 32px;
+}
+@media screen and (max-width: 840px) {
+  .page .contents h3 + .lead {
+    margin: 4% auto 8%;
+  }
 }

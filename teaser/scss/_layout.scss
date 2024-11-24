@@ -15,9 +15,7 @@
 		z-index: 20;
 	}
 	@include m.max-screen(v.$sp) {
-		position: absolute;
-		background: transparent;
-		display: none;
+		padding: 2% 0;
 		&.fix{
 			display: block;
 			position: fixed;
@@ -85,7 +83,7 @@
 		.nav{
 			display: flex;
 			align-items: center;
-			column-gap: px;
+			column-gap: 32px;
 			@include m.max-screen(v.$sp) {
 				display: none;
 				position: absolute;
@@ -158,128 +156,9 @@
  --------- */
 main{
 	display: block;
-	.main{
-		position: relative;
-		height: 100vh;
-		// @include m.max-screen(v.$sp) {
-		// 	height: 80vh;
-		// }
-		&_top{
-			background: url(../img/top/main_top.png) repeat-x top center / contain;
-			height: 30.078125vh;
-			@include m.max-screen(v.$tab) {
-				background-size: auto 100%;
-			}
-			@include m.max-screen(v.$sp) {
-				background: url(../img/top/main_top_sp.png) repeat-x top center / contain;
-				// background-size: auto 80%;
-			}
-		}
-		&_center{
-			background: url(../img/top/main_center.png) repeat-x center center / contain;
-			height: 45.117187vh;
-			@include m.max-screen(v.$tab) {
-				background-size: auto 100%;
-				// height: 40vh;
-			}
-			@include m.max-screen(v.$sp) {
-				background: url(../img/top/main_center_sp.png) repeat-x center center / contain;
-			}
-		}
-		&_botton{
-			background: url(../img/top/main_bottn.png) repeat-x top center / contain;
-			height: 24.804688vh;
-			@include m.max-screen(v.$tab) {
-				background-size: auto 100%;
-			}
-			@include m.max-screen(v.$sp) {
-				// background-size: auto 80%;
-				background: url(../img/top/main_bottn_sp.png) repeat-x top center / contain;
-			}
-		}
-		&_box{
-			@include m.abs_top-center();
-			background: rgba(v.$white, .8);
-			border-radius: 32px;
-			margin: 0 auto;
-			@include m.w-contents();
-			padding: 30px 20px 50px;
-			text-align: center;
-			max-height: 80vh;
-			@include m.max-screen(v.$tab) {
-				padding: 3% 2% 5%;
-			}
-			.ttl{
-				margin-bottom: 10px;
-				max-height: 32.079208vh;
-				@media screen and (max-width: v.$tab) {
-					width: 80%;
-					margin: 0 auto 1%;
-				}
-			}
-			.date{
-				font-size: 32px;
-				font-family: m-plus-rounded-2p, sans-serif;
-				font-weight: 900;
-				font-style: normal;
-				color: v.$accent;
-				@include m.max-screen(v.$tab) {
-					font-size: 26px;
-				}
-				@include m.max-screen(v.$sp) {
-					font-size: min(22px, 5vw);
-				}
-			}
-			.line{
-				margin: 30px 0 24px;
-				border-top: 2px dotted v.$secondary-dark;
-				@include m.max-screen(v.$tab) {
-					margin: 3% 0;
-				}
-			}
-			.lead{
-				width: 480px;
-				margin: 0 auto;
-				max-height: 28.514851vh;
-				@include m.max-screen(v.$tab) {
-					width: 60%;
-				}
-				@include m.max-screen(v.$sp) {
-					width: 80%;
-				}
-				&_ttl{
-					padding-left: 40px;
-					margin-bottom: 30px;
-					@include m.max-screen(v.$tab) {
-						margin-bottom: 3%;
-					}
-				}
-				&_txt{
-					text-align: left;
-					@include m.txt-mini();
-				}
-			}
-			
-		}
-	}
 	.contents{
 		position: relative;
 		@include m.txt();
-		.icon{
-			position: absolute;
-			z-index: 10;
-			top: calc(50vh - 88px);
-			right: 0;
-			@include m.max-screen(v.$tab) {
-				width: 100px;
-			}
-			@include m.max-screen(v.$sp) {
-				width: 70px;
-			}
-			&.fix{
-				position: fixed;
-			}
-		}
 		.inner{
 			background: v.$white;
 			border-radius: 24px;
@@ -332,77 +211,6 @@ main{
 					}
 				}
 
-			}
-		}
-		.offer{
-			background: v.$secondary;
-			padding: 24px 0 32px;
-			.button{
-				margin: 34px auto 0;
-			}
-			.inner{
-				.txt{
-					width: 700px;
-					margin: 0 auto;
-					@include m.max-screen(v.$tab) {
-						width: auto;
-					}
-				}
-			}
-		}
-		.about{
-			padding: 24px 0 32px;
-			.inner{
-				.txt{
-					width: 700px;
-					margin: 0 auto;
-					@include m.max-screen(v.$tab) {
-						width: auto;
-					}
-				}
-			}
-		}
-		.outline{
-			background: v.$secondary-dark;
-			padding: 24px 0 32px;
-			.inner{
-				display: flex;
-				flex-direction: row-reverse;
-				@include m.max-screen(v.$sp) {
-					display: block;
-				}
-				.info{
-					display: flex;
-					flex-direction: column;
-					justify-content: space-between;
-					width: 50%;
-					@include m.max-screen(v.$sp) {
-						margin: 0 auto;
-						width: auto;
-					}
-					.date{
-						dt{
-							@include m.txt-mini();
-							font-weight: 600;
-						}
-						dd{
-							margin-bottom: 16px;
-						}
-					}
-					.button{
-						@include m.max-screen(v.$tab) {
-							margin: 0 auto;
-						}
-					}
-				}
-				.map{
-					width: 50%;
-					text-align: center;
-					@include m.max-screen(v.$sp) {
-						width: auto;
-						margin-bottom: 5%;
-					}
-				}
 			}
 		}
 	}
