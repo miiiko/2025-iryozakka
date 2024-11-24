@@ -85,6 +85,7 @@
 		.nav{
 			display: flex;
 			align-items: center;
+			column-gap: px;
 			@include m.max-screen(v.$sp) {
 				display: none;
 				position: absolute;
@@ -282,7 +283,7 @@ main{
 		.inner{
 			background: v.$white;
 			border-radius: 24px;
-			padding: 24px;
+			padding: 24px 24px 40px;
 			@include m.w-contents();
 			margin: 0 auto;
 			@include m.max-screen(v.$tab) {
@@ -341,7 +342,11 @@ main{
 			}
 			.inner{
 				.txt{
-					text-align: center;
+					width: 700px;
+					margin: 0 auto;
+					@include m.max-screen(v.$tab) {
+						width: auto;
+					}
 				}
 			}
 		}
@@ -349,7 +354,7 @@ main{
 			padding: 24px 0 32px;
 			.inner{
 				.txt{
-					width: 680px;
+					width: 700px;
 					margin: 0 auto;
 					@include m.max-screen(v.$tab) {
 						width: auto;

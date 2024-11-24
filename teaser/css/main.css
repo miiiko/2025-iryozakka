@@ -262,6 +262,7 @@ a:hover {
 .header_box .nav {
   display: flex;
   align-items: center;
+  column-gap: px;
 }
 @media screen and (max-width: 580px) {
   .header_box .nav {
@@ -517,7 +518,7 @@ main .contents .icon.fix {
 main .contents .inner {
   background: #fff;
   border-radius: 24px;
-  padding: 24px;
+  padding: 24px 24px 40px;
   width: 800px;
   margin: 0 auto;
 }
@@ -593,13 +594,19 @@ main .contents .offer .button {
   margin: 34px auto 0;
 }
 main .contents .offer .inner .txt {
-  text-align: center;
+  width: 700px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 840px) {
+  main .contents .offer .inner .txt {
+    width: auto;
+  }
 }
 main .contents .about {
   padding: 24px 0 32px;
 }
 main .contents .about .inner .txt {
-  width: 680px;
+  width: 700px;
   margin: 0 auto;
 }
 @media screen and (max-width: 840px) {
