@@ -201,10 +201,12 @@ a:hover {
   gap: 16px;
   justify-content: center;
   padding: 0 16px;
+  position: relative;
 }
 @media screen and (max-width: 900px) {
   .header_box {
     width: 90%;
+    padding: 10px 0;
   }
 }
 @media screen and (max-width: 580px) {
@@ -273,6 +275,7 @@ a:hover {
     border: 1px solid #00A597;
     background: #fff;
     border-radius: 16px;
+    z-index: 10;
   }
 }
 .header_box .nav_link {
@@ -291,13 +294,13 @@ a:hover {
 }
 @media screen and (max-width: 840px) {
   .header_box .nav_link {
-    padding: 16px;
-    gap: 16px;
+    padding: 10px 4px;
+    gap: 8px;
   }
 }
 @media screen and (max-width: 580px) {
   .header_box .nav_link {
-    padding: 8px 16px;
+    padding: 8px 4px;
     display: block;
     border-radius: 0;
   }
