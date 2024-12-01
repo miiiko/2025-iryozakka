@@ -84,9 +84,18 @@
             }
         }
         .price{
-            @include m.max-screen(v.$sp) {
-                overflow-x: auto;
-                display: block;
+            .sp_icon{
+                display: none;
+                @include m.max-screen(v.$sp) {
+                    display: block;
+                    text-align: right;
+                }
+            }
+            &_box{
+                @include m.max-screen(v.$sp) {
+                    overflow-x: auto;
+                    display: block;
+                }
             }
             &_list{
                 width: 400px;

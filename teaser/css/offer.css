@@ -93,8 +93,17 @@
 .contents .info .label dd .map a {
   display: inline-block;
 }
+.contents .info .price .sp_icon {
+  display: none;
+}
 @media screen and (max-width: 580px) {
-  .contents .info .price {
+  .contents .info .price .sp_icon {
+    display: block;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 580px) {
+  .contents .info .price_box {
     overflow-x: auto;
     display: block;
   }
