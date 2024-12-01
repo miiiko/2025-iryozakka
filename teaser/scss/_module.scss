@@ -1,6 +1,43 @@
 @use "_vars.scss"as v;
 @use "_mixin.scss"as m;
 
+.button{
+    display: flex;
+    align-items: center;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: v.$shadow;
+    @include m.max-screen(v.$tab) {
+        width: 200px;
+    }
+    @include m.max-screen(v.$sp) {
+        width: 180px;
+    }
+    &:after{
+        content: "";
+        background: url(../img/icon_arrow.svg) no-repeat center center / contain;
+        width: 12px;
+        height: 24px;
+        margin-right: 14px;
+    }
+    a{
+        color: v.$white;
+        padding: 12px 0 12px 16px;
+        text-align: center;
+        width: calc(100% - 26px);
+    }
+    &.accent{
+        background: v.$accent;
+    }
+    &.gray{
+        background: #ccc;
+        a{
+            pointer-events: none;
+        }
+    }
+
+}
+
 .page{
     .main{
         background: v.$secondary-dark;

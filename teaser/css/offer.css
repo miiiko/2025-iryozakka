@@ -175,3 +175,6 @@
     font-size: 12px;
   }
 }
+.contents .button {
+  margin: 0 auto;
+}
