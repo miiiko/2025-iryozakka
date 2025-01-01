@@ -563,11 +563,21 @@ main .contents .inner .ttl {
   padding: 56px 24px 64px;
   color: #fff;
   position: relative;
+  line-height: 1.3;
 }
 @media screen and (max-width: 840px) {
   .page .main_ttl {
     padding: 6% 3% 7%;
     font-size: 32px;
+    line-height: 1.1;
+  }
+}
+.page .main_ttl span {
+  font-size: 75%;
+}
+@media screen and (max-width: 840px) {
+  .page .main_ttl span {
+    font-size: 50%;
   }
 }
 .page .main_ttl:after {

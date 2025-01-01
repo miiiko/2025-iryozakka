@@ -37,6 +37,9 @@
   color: #00CCBB;
   padding-right: 0.3em;
 }
+.contents .info strong {
+  color: #00A597;
+}
 .contents .info .label_box {
   display: flex;
   column-gap: 18px;

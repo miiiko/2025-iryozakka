@@ -32,6 +32,9 @@
                 padding-right: 0.3em;
             }
         }
+        strong{
+            color: v.$secondary-dark;
+        }
         .label{
             &_box{
                 display: flex;
