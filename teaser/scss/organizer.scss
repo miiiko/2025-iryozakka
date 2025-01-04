@@ -1,0 +1,50 @@
+@use "_vars.scss"as v;
+@use "_mixin.scss"as m;
+
+.contents{
+    .organizer{
+        &_list{
+            margin: 40px auto 0;
+            width: 600px;
+            @include m.max-screen(v.$tab) {
+                margin: 6% auto 0;
+                width: 89.5%;
+            }
+            @include m.max-screen(v.$sp) {
+                width: auto;
+            }
+            > li{
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+                @include m.max-screen(v.$sp) {
+                    display: block;
+                }
+                > h4{
+                    @include m.txt-mini();
+                    @include m.underline();
+                    @include m.max-screen(v.$sp) {
+                        margin-bottom: 1%;
+                    }
+                }
+                .list{
+                    width: 76%;
+                    @include m.max-screen(v.$sp) {
+                        width: auto;
+                    }
+                    
+                }
+                
+            }
+            .leader{
+                margin-bottom: 18px;
+                @include m.max-screen(v.$tab) {
+                    margin-bottom: 3%;
+                }
+                @include m.max-screen(v.$sp) {
+                    margin-bottom: 6%;
+                }
+            }
+        }
+    }
+}

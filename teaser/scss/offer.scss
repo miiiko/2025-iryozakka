@@ -18,9 +18,7 @@
         }
         h4{
             @include m.txt-mini();
-            background: linear-gradient(transparent 65%, rgba(v.$secondary, .5) 35%);
-            display: inline-block;
-            font-weight: 300;
+            @include m.underline();
             margin-bottom: 10px;
         }
         h5{

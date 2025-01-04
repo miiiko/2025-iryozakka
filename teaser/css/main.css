@@ -205,7 +205,7 @@ a:hover {
 }
 @media screen and (max-width: 900px) {
   .header_box {
-    width: 90%;
+    width: 96%;
     padding: 10px 0;
   }
 }
@@ -283,8 +283,8 @@ a:hover {
   align-items: center;
   background: rgba(255, 255, 255, 0.75);
   border-radius: 32px;
-  padding: 24px;
-  gap: 24px;
+  padding: 24px 16px;
+  gap: 16px;
   font-size: 16px;
 }
 @media screen and (max-width: 840px) {
@@ -294,14 +294,14 @@ a:hover {
 }
 @media screen and (max-width: 840px) {
   .header_box .nav_link {
-    padding: 10px 4px;
+    padding: 10px 12px;
     gap: 8px;
     flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 580px) {
   .header_box .nav_link {
-    padding: 8px 4px;
+    padding: 8px 12px;
     display: block;
     border-radius: 0;
   }
@@ -666,4 +666,62 @@ main .contents .inner .ttl {
   .page .contents h3 + .lead {
     margin: 4% auto 8%;
   }
+}
+.page .contents h3.no-icon {
+  position: static;
+}
+.page .contents h3.no-icon::before {
+  content: none;
+}
+.page .contents h3.no-icon picture {
+  display: block;
+  margin-bottom: 62px;
+}
+@media screen and (max-width: 840px) {
+  .page .contents h3.no-icon picture {
+    width: 13.333333vw;
+    margin: 0 auto 8%;
+    min-width: 80px;
+  }
+}
+.page .contents .list > li {
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 840px) {
+  .page .contents .list > li {
+    margin-bottom: 3.5%;
+  }
+}
+.page .contents .list > li:last-of-type {
+  margin-bottom: 0;
+}
+.page .contents .list_box .name {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+@media screen and (max-width: 840px) {
+  .page .contents .list_box .name {
+    font-size: 14px;
+  }
+}
+.page .contents .list_box .tag {
+  font-size: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: baseline;
+}
+.page .contents .list_box .tag > li {
+  display: flex;
+  max-width: 180px;
+  padding: 2px 10px;
+  border-radius: 10px;
+  background: rgba(0, 204, 187, 0.3);
+}
+.page .contents .list_box .tag > li:before {
+  display: block;
+  content: "# ";
+}
+.page .contents .list_box .tag > li.core {
+  background: #FFF1E0;
 }

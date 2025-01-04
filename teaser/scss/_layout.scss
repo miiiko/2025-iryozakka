@@ -31,7 +31,7 @@
 		padding: 0 16px;
 		position: relative;
 		@include m.max-screen(v.$header) {
-			width: 90%;
+			width: 96%;
 			padding: 10px 0;
 		}
 		@include m.max-screen(v.$sp) {
@@ -103,16 +103,16 @@
 				align-items: center;
 				background: rgba(v.$white, .75);
 				border-radius: 32px;
-				padding: 24px;
-				gap: 24px;
+				padding: 24px 16px;
+				gap: 16px;
 				@include m.txt();
 				@include m.max-screen(v.$tab) {
-					padding: 10px 4px;
+					padding: 10px 12px;
 					gap: 8px;
 					flex-wrap: wrap;
 				}
 				@include m.max-screen(v.$sp) {
-					padding: 8px 4px;
+					padding: 8px 12px;
 					display: block;
 					border-radius: 0;
 					> li{

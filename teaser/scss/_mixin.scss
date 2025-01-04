@@ -60,6 +60,11 @@
   font-size: 10px;
 }
 
+@mixin underline(){
+  background: linear-gradient(transparent 65%, rgba(v.$secondary, .5) 35%);
+  display: inline-block;
+  font-weight: 300;
+}
 
 
 @mixin size-scale($properties, $minWidth, $maxWidth, $minValue, $maxValue) {
