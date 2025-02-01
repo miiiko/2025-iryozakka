@@ -84,15 +84,19 @@
         padding: 32px 24px;
         margin: 40px auto 62px;
         @include m.w-contents();
-        @include m.txt();
+        & {
+            @include m.txt();
+        }
         @include m.max-screen(v.$tab) {
             padding: 6% 5%;
         }
         h3{
             text-align: center;
             @include m.ttl-lv2();
-            position: relative;
-            padding-top: 34px;
+            & {
+                position: relative;
+                padding-top: 34px;
+            }
             @include m.max-screen(v.$tab) {
                 padding-top: 26px;
             }
@@ -130,6 +134,27 @@
                 }
             }
         }
+        h4{
+            &.line{
+                @include m.txt-mini();
+                & {
+                    @include m.underline();
+                }
+            }
+            &.label{
+                background: v.$secondary;
+                min-width: 71px;
+                min-height: 21px;
+                color: v.$white;
+                text-align: center;
+                padding: 3px 4px;
+                display: inline-block;
+                @include m.txt-mini();
+                @include m.max-screen(v.$tab) {
+                    margin-bottom: 1%;
+                }
+            }
+        }
         .list{
             > li{
                 margin-bottom: 16px;
@@ -143,7 +168,9 @@
             &_box{
                 .name{
                     @include m.txt();
-                    margin-bottom: 4px;
+                    & {
+                        margin-bottom: 4px;
+                    }
                 }
                 .tag{
                     @include m.txt-micro();

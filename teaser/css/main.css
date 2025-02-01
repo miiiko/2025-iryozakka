@@ -328,14 +328,16 @@ a:hover {
   border-radius: 20px;
   color: #fff;
   font-size: 14px;
-  display: block;
-  padding: 10px 36px;
-  box-shadow: 0px 4px 4px 0px rgba(48, 78, 76, 0.5);
 }
 @media screen and (max-width: 840px) {
   .header_box .nav_button > li > a {
     font-size: 12px;
   }
+}
+.header_box .nav_button > li > a {
+  display: block;
+  padding: 10px 36px;
+  box-shadow: 0px 4px 4px 0px rgba(48, 78, 76, 0.5);
 }
 @media screen and (max-width: 840px) {
   .header_box .nav_button > li > a {
@@ -382,12 +384,14 @@ main .contents .inner {
   border-radius: 24px;
   padding: 24px 24px 40px;
   width: 800px;
-  margin: 0 auto;
 }
 @media screen and (max-width: 840px) {
   main .contents .inner {
     width: 90%;
   }
+}
+main .contents .inner {
+  margin: 0 auto;
 }
 @media screen and (max-width: 840px) {
   main .contents .inner {
@@ -400,14 +404,16 @@ main .contents .inner {
   }
 }
 main .contents .inner .ttl {
-  text-align: center;
   font-size: 28px;
-  margin-bottom: 34px;
 }
 @media screen and (max-width: 840px) {
   main .contents .inner .ttl {
     font-size: 22px;
   }
+}
+main .contents .inner .ttl {
+  text-align: center;
+  margin-bottom: 34px;
 }
 
 /* ---------
@@ -434,12 +440,14 @@ main .contents .inner .ttl {
   display: flex;
   justify-content: space-between;
   width: 800px;
-  margin: 0 auto;
 }
 @media screen and (max-width: 840px) {
   .footer_info {
     width: 90%;
   }
+}
+.footer_info {
+  margin: 0 auto;
 }
 @media screen and (max-width: 580px) {
   .footer_info {
@@ -609,12 +617,14 @@ main .contents .inner .ttl {
   padding: 32px 24px;
   margin: 40px auto 62px;
   width: 800px;
-  font-size: 16px;
 }
 @media screen and (max-width: 840px) {
   .page .contents {
     width: 90%;
   }
+}
+.page .contents {
+  font-size: 16px;
 }
 @media screen and (max-width: 840px) {
   .page .contents {
@@ -629,13 +639,15 @@ main .contents .inner .ttl {
 .page .contents h3 {
   text-align: center;
   font-size: 20px;
-  position: relative;
-  padding-top: 34px;
 }
 @media screen and (max-width: 840px) {
   .page .contents h3 {
     font-size: 18px;
   }
+}
+.page .contents h3 {
+  position: relative;
+  padding-top: 34px;
 }
 @media screen and (max-width: 840px) {
   .page .contents h3 {
@@ -684,6 +696,39 @@ main .contents .inner .ttl {
     min-width: 80px;
   }
 }
+.page .contents h4.line {
+  font-size: 14px;
+}
+@media screen and (max-width: 840px) {
+  .page .contents h4.line {
+    font-size: 12px;
+  }
+}
+.page .contents h4.line {
+  background: linear-gradient(transparent 65%, rgba(0, 204, 187, 0.5) 35%);
+  display: inline-block;
+  font-weight: 300;
+}
+.page .contents h4.label {
+  background: #00CCBB;
+  min-width: 71px;
+  min-height: 21px;
+  color: #fff;
+  text-align: center;
+  padding: 3px 4px;
+  display: inline-block;
+  font-size: 14px;
+}
+@media screen and (max-width: 840px) {
+  .page .contents h4.label {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .page .contents h4.label {
+    margin-bottom: 1%;
+  }
+}
 .page .contents .list > li {
   margin-bottom: 16px;
 }
@@ -697,12 +742,14 @@ main .contents .inner .ttl {
 }
 .page .contents .list_box .name {
   font-size: 16px;
-  margin-bottom: 4px;
 }
 @media screen and (max-width: 840px) {
   .page .contents .list_box .name {
     font-size: 14px;
   }
+}
+.page .contents .list_box .name {
+  margin-bottom: 4px;
 }
 .page .contents .list_box .tag {
   font-size: 10px;
