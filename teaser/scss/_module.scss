@@ -81,7 +81,8 @@
     .contents{
         background: v.$white;
         border-radius: 24px;
-        padding: 32px 24px;
+        // padding: 32px 24px;
+        padding: 42px 60px;
         margin: 40px auto 62px;
         @include m.w-contents();
         & {
@@ -194,6 +195,9 @@
                     }
                 }
             }
+        }
+        .column{
+            
         }
     }
 }
