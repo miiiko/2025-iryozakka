@@ -31,4 +31,28 @@
             }
         }
     }
+    .column{
+        &#theme{
+            padding-top: 62px;
+            .img_right{
+                column-gap: 24px;
+                align-items: flex-end;
+                .txt{
+                    width: calc(100% - (200px + 24px));
+                }
+                .img{
+                    width: 200px;
+                    padding: 0 15px;
+                }
+            }
+        }
+        &#exhibition{
+            padding-top: 80px;
+            .mascot{
+                .txt{
+                   
+                }
+            }
+        }
+    }
 }

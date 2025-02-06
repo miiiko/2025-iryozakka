@@ -772,3 +772,21 @@ main .contents .inner .ttl {
 .page .contents .list_box .tag > li.core {
   background: #FFF1E0;
 }
+.page .contents .column h3 {
+  margin-bottom: 24px;
+}
+.page .contents .column .img_right {
+  display: flex;
+}
+.page .contents .column .img_left {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.page .contents .column .txt {
+  font-size: 14px;
+}
+@media screen and (max-width: 840px) {
+  .page .contents .column .txt {
+    font-size: 12px;
+  }
+}

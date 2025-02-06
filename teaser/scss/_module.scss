@@ -197,7 +197,19 @@
             }
         }
         .column{
-            
+            h3{
+                margin-bottom: 24px;
+            }
+            .img_right{
+                display: flex;
+            }
+            .img_left{
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            .txt{
+                @include m.txt-mini();
+            }
         }
     }
 }

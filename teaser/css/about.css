@@ -25,3 +25,20 @@
   display: inline-block;
   margin-right: 8px;
 }
+.contents .column#theme {
+  padding-top: 62px;
+}
+.contents .column#theme .img_right {
+  column-gap: 24px;
+  align-items: flex-end;
+}
+.contents .column#theme .img_right .txt {
+  width: calc(100% - 224px);
+}
+.contents .column#theme .img_right .img {
+  width: 200px;
+  padding: 0 15px;
+}
+.contents .column#exhibition {
+  padding-top: 80px;
+}
