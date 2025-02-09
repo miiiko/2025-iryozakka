@@ -790,3 +790,10 @@ main .contents .inner .ttl {
     font-size: 12px;
   }
 }
+.page .contents .column .txt .line, .page .contents .column .txt .label {
+  margin-bottom: 8px;
+}
+.page .contents .column .img.bg {
+  background: #FFF1E0;
+  border-radius: 18px;
+}

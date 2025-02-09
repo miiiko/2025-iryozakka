@@ -209,6 +209,15 @@
             }
             .txt{
                 @include m.txt-mini();
+                .line, .label{
+                    margin-bottom: 8px;
+                }
+            }
+            .img{
+                &.bg{
+                    background: v.$base;
+                    border-radius: 18px;
+                }
             }
         }
     }
