@@ -199,18 +199,31 @@
         .column{
             h3{
                 margin-bottom: 24px;
+                @include m.max-screen(v.$tab) {
+                    margin-bottom: 5%;
+                }
             }
             .img_right{
                 display: flex;
+                flex-direction: row-reverse;
+                @include m.max-screen(v.$tab) {
+                    display: block;
+                }
             }
             .img_left{
                 display: flex;
-                flex-direction: row-reverse;
+                @include m.max-screen(v.$tab) {
+                    display: block
+                }
             }
-            .txt{
+            .txt,
+            .txt_ex{
                 @include m.txt-mini();
                 .line, .label{
                     margin-bottom: 8px;
+                    @include m.max-screen(v.$tab) {
+                        margin-bottom: 4px;
+                    }
                 }
             }
             .img{

@@ -8,8 +8,24 @@
   padding: 32px 60px 24px;
   border-radius: 10px;
 }
+@media screen and (max-width: 840px) {
+  .contents .page_nav {
+    width: 80%;
+    padding: 5% 8%;
+  }
+}
+@media screen and (max-width: 580px) {
+  .contents .page_nav {
+    width: 96%;
+  }
+}
 .contents .page_nav-link li {
   margin-bottom: 16px;
+}
+@media screen and (max-width: 840px) {
+  .contents .page_nav-link li {
+    margin-bottom: 5%;
+  }
 }
 .contents .page_nav-link li:last-of-type {
   margin-bottom: 0;
@@ -28,6 +44,11 @@
 .contents .column#theme {
   padding-top: 62px;
 }
+@media screen and (max-width: 840px) {
+  .contents .column#theme {
+    padding-top: 8%;
+  }
+}
 .contents .column#theme .img_right {
   column-gap: 24px;
   align-items: flex-end;
@@ -35,15 +56,35 @@
 .contents .column#theme .img_right .txt {
   width: calc(100% - 224px);
 }
+@media screen and (max-width: 840px) {
+  .contents .column#theme .img_right .txt {
+    width: auto;
+  }
+}
 .contents .column#theme .img_right .img {
   width: 200px;
   padding: 0 15px;
 }
+@media screen and (max-width: 840px) {
+  .contents .column#theme .img_right .img {
+    margin: 0 auto 5%;
+  }
+}
 .contents .column#exhibition {
   padding-top: 80px;
 }
+@media screen and (max-width: 840px) {
+  .contents .column#exhibition {
+    padding-top: 10%;
+  }
+}
 .contents .column#exhibition > div {
   margin-bottom: 80px;
+}
+@media screen and (max-width: 840px) {
+  .contents .column#exhibition > div {
+    margin-bottom: 10%;
+  }
 }
 .contents .column#exhibition > div:last-of-type {
   margin-bottom: 0;
@@ -54,23 +95,41 @@
 .contents .column#exhibition .mascot .txt {
   width: calc(100% - 384px - 32px);
 }
+@media screen and (max-width: 840px) {
+  .contents .column#exhibition .mascot .txt {
+    width: auto;
+  }
+}
 .contents .column#exhibition .mascot .img {
   width: 384px;
   padding: 20px 24px 10px 16px;
 }
-.contents .column#exhibition .medicali-llust > .txt {
-  margin-bottom: 18px;
+@media screen and (max-width: 840px) {
+  .contents .column#exhibition .mascot .img {
+    margin: 0 auto 5%;
+  }
 }
-.contents .column#exhibition .medicali-llust .img_right {
-  justify-content: space-between;
-  align-items: flex-end;
+.contents .column#exhibition .medicali-llust {
+  display: grid;
+  grid-template-columns: 1fr 254px;
+  grid-template-rows: repeat(2, auto);
+  grid-column-gap: 32px;
+  grid-row-gap: 18px;
 }
-.contents .column#exhibition .medicali-llust .img_right .img {
-  width: 254px;
+@media screen and (max-width: 840px) {
+  .contents .column#exhibition .medicali-llust {
+    display: block;
+  }
+}
+.contents .column#exhibition .medicali-llust .txt {
+  grid-area: 1/1/2/3;
+}
+.contents .column#exhibition .medicali-llust .txt_ex {
+  grid-area: 2/1/3/2;
+}
+.contents .column#exhibition .medicali-llust .img {
+  grid-area: 2/2/3/3;
   padding: 10px 24px;
-}
-.contents .column#exhibition .medicali-llust .img_right .txt {
-  width: calc(100% - 254px - 32px);
 }
 .contents .column#exhibition .space {
   column-gap: 32px;

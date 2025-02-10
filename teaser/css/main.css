@@ -775,23 +775,49 @@ main .contents .inner .ttl {
 .page .contents .column h3 {
   margin-bottom: 24px;
 }
-.page .contents .column .img_right {
-  display: flex;
+@media screen and (max-width: 840px) {
+  .page .contents .column h3 {
+    margin-bottom: 5%;
+  }
 }
-.page .contents .column .img_left {
+.page .contents .column .img_right {
   display: flex;
   flex-direction: row-reverse;
 }
-.page .contents .column .txt {
+@media screen and (max-width: 840px) {
+  .page .contents .column .img_right {
+    display: block;
+  }
+}
+.page .contents .column .img_left {
+  display: flex;
+}
+@media screen and (max-width: 840px) {
+  .page .contents .column .img_left {
+    display: block;
+  }
+}
+.page .contents .column .txt,
+.page .contents .column .txt_ex {
   font-size: 14px;
 }
 @media screen and (max-width: 840px) {
-  .page .contents .column .txt {
+  .page .contents .column .txt,
+  .page .contents .column .txt_ex {
     font-size: 12px;
   }
 }
-.page .contents .column .txt .line, .page .contents .column .txt .label {
+.page .contents .column .txt .line, .page .contents .column .txt .label,
+.page .contents .column .txt_ex .line,
+.page .contents .column .txt_ex .label {
   margin-bottom: 8px;
+}
+@media screen and (max-width: 840px) {
+  .page .contents .column .txt .line, .page .contents .column .txt .label,
+  .page .contents .column .txt_ex .line,
+  .page .contents .column .txt_ex .label {
+    margin-bottom: 4px;
+  }
 }
 .page .contents .column .img.bg {
   background: #FFF1E0;
