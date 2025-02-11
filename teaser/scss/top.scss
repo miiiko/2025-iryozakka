@@ -49,9 +49,11 @@
         border-radius: 32px;
         margin: 0 auto;
         @include m.w-contents();
-        padding: 30px 20px 50px;
-        text-align: center;
-        max-height: 80vh;
+        &{
+            padding: 30px 20px 50px;
+            text-align: center;
+            max-height: 80vh;
+        }
         @include m.max-screen(v.$tab) {
             padding: 3% 2% 5%;
         }
@@ -126,7 +128,6 @@
         }
     }
     .offer{
-        background: v.$secondary;
         padding: 24px 0 32px;
         .button{
             margin: 34px auto 0;
@@ -142,6 +143,7 @@
         }
     }
     .about{
+        background: v.$secondary;
         padding: 24px 0 32px;
         .inner{
             .txt{
@@ -151,6 +153,9 @@
                     width: auto;
                 }
             }
+        }
+        .button{
+            margin: 34px auto 0;
         }
     }
     .outline{
@@ -174,7 +179,9 @@
                 .date{
                     dt{
                         @include m.txt-mini();
-                        font-weight: 600;
+                        &{
+                            font-weight: 600;
+                        }
                     }
                     dd{
                         margin-bottom: 16px;

@@ -62,14 +62,16 @@
   border-radius: 32px;
   margin: 0 auto;
   width: 800px;
-  padding: 30px 20px 50px;
-  text-align: center;
-  max-height: 80vh;
 }
 @media screen and (max-width: 840px) {
   .main_box {
     width: 90%;
   }
+}
+.main_box {
+  padding: 30px 20px 50px;
+  text-align: center;
+  max-height: 80vh;
 }
 @media screen and (max-width: 840px) {
   .main_box {
@@ -166,7 +168,6 @@
   position: fixed;
 }
 .contents .offer {
-  background: #00CCBB;
   padding: 24px 0 32px;
 }
 .contents .offer .button {
@@ -182,6 +183,7 @@
   }
 }
 .contents .about {
+  background: #00CCBB;
   padding: 24px 0 32px;
 }
 .contents .about .inner .txt {
@@ -192,6 +194,9 @@
   .contents .about .inner .txt {
     width: auto;
   }
+}
+.contents .about .button {
+  margin: 34px auto 0;
 }
 .contents .outline {
   background: #00A597;
@@ -220,12 +225,14 @@
 }
 .contents .outline .inner .info .date dt {
   font-size: 14px;
-  font-weight: 600;
 }
 @media screen and (max-width: 840px) {
   .contents .outline .inner .info .date dt {
     font-size: 12px;
   }
+}
+.contents .outline .inner .info .date dt {
+  font-weight: 600;
 }
 .contents .outline .inner .info .date dd {
   margin-bottom: 16px;
