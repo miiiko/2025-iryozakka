@@ -18,15 +18,17 @@
 }
 .contents .info h4 {
   font-size: 14px;
-  background: linear-gradient(transparent 65%, rgba(0, 204, 187, 0.5) 35%);
-  display: inline-block;
-  font-weight: 300;
-  margin-bottom: 10px;
 }
 @media screen and (max-width: 840px) {
   .contents .info h4 {
     font-size: 12px;
   }
+}
+.contents .info h4 {
+  background: linear-gradient(transparent 65%, rgba(0, 204, 187, 0.5) 35%);
+  display: inline;
+  font-weight: 300;
+  margin-bottom: 10px;
 }
 .contents .info h5 {
   font-weight: 300;
@@ -160,12 +162,14 @@
 .contents .info .notice {
   list-style-type: "※";
   font-size: 14px;
-  padding-left: 1em;
 }
 @media screen and (max-width: 840px) {
   .contents .info .notice {
     font-size: 12px;
   }
+}
+.contents .info .notice {
+  padding-left: 1em;
 }
 .contents .info .mini {
   font-size: 12px;

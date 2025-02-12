@@ -26,7 +26,7 @@
 .contents .organizer_list > li > h4 {
   font-size: 14px;
   background: linear-gradient(transparent 65%, rgba(0, 204, 187, 0.5) 35%);
-  display: inline-block;
+  display: inline;
   font-weight: 300;
 }
 @media screen and (max-width: 840px) {

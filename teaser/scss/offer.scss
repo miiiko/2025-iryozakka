@@ -18,8 +18,10 @@
         }
         h4{
             @include m.txt-mini();
-            @include m.underline();
-            margin-bottom: 10px;
+            & {
+                @include m.underline();
+                margin-bottom: 10px;
+            }
         }
         h5{
             font-weight: 300;
@@ -51,7 +53,9 @@
             }
             &.longttl{
                 .label_box{
-                    display: block;
+                    &{
+                        display: block;
+                    }
                     dt{
                         display: inline-block;
                         margin-bottom: 4px;
@@ -145,7 +149,9 @@
         .notice{
             list-style-type: '※';
             @include m.txt-mini();
-            padding-left: 1em;
+            &{
+                padding-left: 1em;
+            }
         }
         .mini{
             font-size: 12px;

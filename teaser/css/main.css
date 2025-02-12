@@ -706,7 +706,7 @@ main .contents .inner .ttl {
 }
 .page .contents h4.line {
   background: linear-gradient(transparent 65%, rgba(0, 204, 187, 0.5) 35%);
-  display: inline-block;
+  display: inline;
   font-weight: 300;
 }
 .page .contents h4.label {
