@@ -21,6 +21,7 @@
             & {
                 @include m.underline();
                 margin-bottom: 10px;
+                display: inline-block;
             }
         }
         h5{

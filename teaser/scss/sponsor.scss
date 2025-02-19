@@ -1,0 +1,11 @@
+@use "_vars.scss"as v;
+@use "_mixin.scss"as m;
+
+.contents{
+    .lead{
+        margin-bottom: 32px;
+    }
+    h3{
+        margin-bottom: 24px;
+    }
+}

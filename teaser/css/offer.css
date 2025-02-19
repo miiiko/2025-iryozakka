@@ -29,6 +29,7 @@
   display: inline;
   font-weight: 300;
   margin-bottom: 10px;
+  display: inline-block;
 }
 .contents .info h5 {
   font-weight: 300;
