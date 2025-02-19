@@ -4,3 +4,31 @@
 .contents h3 {
   margin-bottom: 24px;
 }
+.contents .table {
+  margin-bottom: 80px;
+}
+.contents .table_box .table_list {
+  width: 100%;
+}
+.contents .table_box .table_list tr {
+  font-size: 14px;
+}
+@media screen and (max-width: 840px) {
+  .contents .table_box .table_list tr {
+    font-size: 12px;
+  }
+}
+.contents .table_box .table_list tr.table_ttl {
+  font-size: 16px;
+}
+@media screen and (max-width: 840px) {
+  .contents .table_box .table_list tr.table_ttl {
+    font-size: 14px;
+  }
+}
+.contents .table_box .table_list tr th {
+  vertical-align: middle;
+}
+.contents .text_box .booth {
+  width: 80%;
+}

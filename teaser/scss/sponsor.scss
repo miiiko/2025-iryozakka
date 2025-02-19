@@ -8,4 +8,26 @@
     h3{
         margin-bottom: 24px;
     }
+    .table{
+        margin-bottom: 80px;
+        &_box{
+            .table_list{
+                width: 100%;
+                tr{
+                    @include m.txt-mini();
+                    &.table_ttl{
+                        @include m.txt();
+                    }
+                    th{
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+    .text_box{
+        .booth{
+            width: 80%;
+        }
+    }
 }
