@@ -258,11 +258,49 @@
         }
         .text_box{
             margin-bottom: 80px;
+            &:last-of-type{
+                margin-bottom: 0
+            }
             @include m.txt-mini();
             .txt{
                 margin-bottom: 32px;
-                > p +.img{
-                    margin: 8px auto 32px;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .label{
+            &_box{
+                display: flex;
+                column-gap: 18px;
+                margin-bottom: 10px;
+                align-items: baseline;
+                @include m.max-screen(v.$tab) {
+                    display: block;
+                    dt{
+                        display: inline-block;
+                    }
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                dt{
+                    background: v.$secondary;
+                    min-width: 71px;
+                    min-height: 21px;
+                    color: v.$white;
+                    font-size: 12px;
+                    text-align: center;
+                    padding: 3px 4px;
+                    @include m.max-screen(v.$tab) {
+                        margin-bottom: 1%;
+                    }
+                }
+                dd{
+                    @include m.txt-mini();
+                }
+                .notice{
+                    font-size: 80%;
                 }
             }
         }

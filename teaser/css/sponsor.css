@@ -31,4 +31,16 @@
 }
 .contents .text_box .booth {
   width: 80%;
+  margin: 16px auto 32px;
+}
+.contents .text_box .acrylic {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 18px;
+  align-items: flex-end;
+  width: 80%;
+  margin: 32px auto;
+}
+.contents .text_box .acrylic > li {
+  width: 48%;
 }
