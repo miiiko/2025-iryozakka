@@ -69,5 +69,20 @@
                 }
             }
         }
+        &.contact{
+            p{
+                &.txt{
+                    &.lead-text{
+                        margin-bottom: 24px;
+                        @include m.max-screen(v.$tab) {
+                            margin-bottom: 5%;
+                        }
+                    }
+                }
+            }
+            .button{
+                margin: 0 auto;
+            }
+        }
     }
 }
