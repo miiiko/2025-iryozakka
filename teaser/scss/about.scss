@@ -268,8 +268,22 @@
         @include m.max-screen(v.$tab) {
             padding-top: 8%;
         }
-        .button{
-            margin: 0 auto;
+        &_button{
+            display: flex;
+            column-gap: 24px;
+            justify-content: center;
+            @include m.max-screen(v.$sp) {
+                display: block;
+            }
+            .button{
+                @include m.max-screen(v.$sp) {
+                    margin: 0 auto;
+                    &:nth-of-type(1){
+                        margin-bottom: 5%;
+                    }
+                }
+            }
         }
+        
     }
 }

@@ -338,6 +338,21 @@
     padding-top: 8%;
   }
 }
-.contents .press .button {
-  margin: 0 auto;
+.contents .press_button {
+  display: flex;
+  column-gap: 24px;
+  justify-content: center;
+}
+@media screen and (max-width: 580px) {
+  .contents .press_button {
+    display: block;
+  }
+}
+@media screen and (max-width: 580px) {
+  .contents .press_button .button {
+    margin: 0 auto;
+  }
+  .contents .press_button .button:nth-of-type(1) {
+    margin-bottom: 5%;
+  }
 }
