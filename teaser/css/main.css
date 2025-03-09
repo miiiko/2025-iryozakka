@@ -327,6 +327,8 @@ a:hover {
 .header_box .nav_button > li > a {
   border-radius: 20px;
   color: #fff;
+}
+.header_box .nav_button > li > a {
   font-size: 14px;
 }
 @media screen and (max-width: 840px) {
@@ -636,8 +638,17 @@ main .contents .inner .ttl {
     padding: 6% 5%;
   }
 }
+.page .contents > .lead {
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 840px) {
+  .page .contents > .lead {
+    margin-bottom: 6%;
+  }
+}
 .page .contents h3 {
   text-align: center;
+  margin-bottom: 24px;
   font-size: 20px;
 }
 @media screen and (max-width: 840px) {
@@ -652,6 +663,7 @@ main .contents .inner .ttl {
 @media screen and (max-width: 840px) {
   .page .contents h3 {
     padding-top: 26px;
+    margin-bottom: 3%;
   }
 }
 .page .contents h3:before {
@@ -725,6 +737,8 @@ main .contents .inner .ttl {
   text-align: center;
   padding: 3px 4px;
   display: inline-block;
+}
+.page .contents h4.label {
   font-size: 14px;
 }
 @media screen and (max-width: 840px) {
@@ -747,6 +761,12 @@ main .contents .inner .ttl {
 }
 .page .contents .list > li:last-of-type {
   margin-bottom: 0;
+}
+.page .contents .list.disc > li {
+  display: flex;
+}
+.page .contents .list.disc > li:before {
+  content: "・";
 }
 .page .contents .list_box .name {
   font-size: 16px;
@@ -835,7 +855,6 @@ main .contents .inner .ttl {
 }
 .page .contents .text_box {
   margin-bottom: 80px;
-  font-size: 14px;
 }
 @media screen and (max-width: 840px) {
   .page .contents .text_box {
@@ -844,6 +863,9 @@ main .contents .inner .ttl {
 }
 .page .contents .text_box:last-of-type {
   margin-bottom: 0;
+}
+.page .contents .text_box {
+  font-size: 14px;
 }
 @media screen and (max-width: 840px) {
   .page .contents .text_box {

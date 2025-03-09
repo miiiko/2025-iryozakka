@@ -1,0 +1,138 @@
+@use "_vars.scss"as v;
+@use "_mixin.scss"as m;
+
+.contents{
+    .text_box{
+
+        .label{
+            &_box{
+                dt{
+                    min-width: 110px;
+                }
+            }
+        }
+        .column{
+            display: flex;
+            column-gap: 2%;
+            align-items: center;
+            @include m.max-screen(v.$tab) {
+                display: block;
+            }
+            .table{
+                width: 58%;
+                @include m.max-screen(v.$tab) {
+                    width: 80%;
+                    margin: 0 auto 5%;
+                }
+                @include m.max-screen(v.$sp) {
+                    width: 90%;
+                }
+                .table_list{
+                    width: 100%;
+                    td{
+                        text-align: left;
+                        padding: 8px 16px;
+                    }
+                    @include m.max-screen(v.$sp) {
+                        th, td{
+                            display: block;
+                            width: 100%;
+                        }
+                        th{
+                            border-right: none;
+                            border-bottom: 1px solid v.$secondary-dark;
+                        }
+                        td{
+                            padding: 8px;
+                            margin-bottom: 4%;
+                        }
+                    }
+                }
+            }
+            .img{
+                width: 40%;
+                @include m.max-screen(v.$tab) {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .list{
+            li{
+                margin-bottom: 4px;
+            }
+        }
+        // .txt{
+        //     &.contact{
+        //         > a{
+        //             @include m.txt();
+        //         }
+        //     }
+        // }
+        &.guide{
+            .txt{
+                @include m.mb_16px();
+            }
+            .list{
+                @include m.mb_40px();
+            }
+            .table{
+                @include m.mb_40px();
+                &_list{
+                    td{
+                        width: 75%;
+                        .list{
+                            margin-bottom: 16px;
+                        }
+                        .notice{
+                            font-size: 12px;
+                            text-align: left;
+                            padding: 8px 10px;
+                            margin: 4px 8px;
+                            background: rgba(v.$secondary-dark, .2);
+                            border-radius: 8px;
+                            .ul_inner{
+                                > span{
+                                    display: block;
+                                }
+                            }
+                            .inner_notice{
+                                margin-top: 4px;
+                                >li{
+                                    display: flex;
+                                    &:before{
+                                        content: '※';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @include m.max-screen(v.$sp) {
+                        width: auto;
+                        .table_ttl{
+                            display: none;
+                        }
+                        th, td{
+                            display: block;
+                            width: 100%;
+                        }
+                        th{
+                            border-right: none;
+                            border-bottom: 1px solid v.$secondary-dark;
+                        }
+                        td{
+                            padding: 8px;
+                            margin-bottom: 4%;
+                        }
+                    }
+                }
+            }
+        }
+        .accent{
+            margin: 40px auto 0;
+            @include m.max-screen(v.$tab) {
+                margin-bottom: 5%;
+            }
+        }
+    }
+}

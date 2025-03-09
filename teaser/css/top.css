@@ -140,6 +140,8 @@
 }
 .main_box .lead_txt {
   text-align: left;
+}
+.main_box .lead_txt {
   font-size: 14px;
 }
 @media screen and (max-width: 840px) {

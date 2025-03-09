@@ -50,14 +50,37 @@
 }
 
 @mixin txt-mini() {
-  font-size: 14px;
-  @media screen and (max-width: v.$tab) {
-    font-size: 12px;
+  &{
+    font-size: 14px;
+    @media screen and (max-width: v.$tab) {
+      font-size: 12px;
+    }
   }
 }
 
 @mixin txt-micro() {
   font-size: 10px;
+}
+
+// space
+
+@mixin mb_16px() {
+  margin-bottom: 16px;
+  @media screen and (max-width: v.$tab) {
+      margin-bottom: 2%;
+  }
+}
+@mixin mb_40px() {
+  margin-bottom: 40px;
+  @media screen and (max-width: v.$tab) {
+      margin-bottom: 5%;
+  }
+}
+@mixin mb_80px() {
+  margin-bottom: 80px;
+  @media screen and (max-width: v.$tab) {
+      margin-bottom: 10%;
+  }
 }
 
 @mixin underline(){

@@ -215,6 +215,8 @@
   border-radius: 60px;
   text-align: center;
   margin-bottom: 0;
+}
+.contents .item .list > li {
   font-size: 14px;
 }
 @media screen and (max-width: 840px) {
