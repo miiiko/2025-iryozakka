@@ -299,6 +299,10 @@
                     margin-bottom: 0;
                 }
             }
+            strong{
+                color: v.$secondary-dark;
+                font-weight: normal;
+            }
         }
         .label{
             &_box{

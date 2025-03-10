@@ -894,6 +894,10 @@ main .contents .inner .ttl {
 .page .contents .text_box .txt:last-of-type {
   margin-bottom: 0;
 }
+.page .contents .text_box strong {
+  color: #00A597;
+  font-weight: normal;
+}
 .page .contents .label_box {
   display: flex;
   column-gap: 18px;
