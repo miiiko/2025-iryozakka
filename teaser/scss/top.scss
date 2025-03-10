@@ -127,7 +127,7 @@
             position: fixed;
         }
     }
-    .offer{
+    .mascot{
         padding: 24px 0 32px;
         .button{
             margin: 34px auto 0;
@@ -142,8 +142,24 @@
             }
         }
     }
-    .about{
+    .offer{
+        padding: 24px 0 32px;
         background: v.$secondary;
+        .button{
+            margin: 34px auto 0;
+        }
+        .inner{
+            .txt{
+                width: 700px;
+                margin: 0 auto;
+                @include m.max-screen(v.$tab) {
+                    width: auto;
+                }
+            }
+        }
+    }
+    .about{
+        background: v.$secondary-dark;
         padding: 24px 0 32px;
         .inner{
             .txt{
@@ -159,7 +175,7 @@
         }
     }
     .outline{
-        background: v.$secondary-dark;
+        // background: v.$secondary-dark;
         padding: 24px 0 32px;
         .inner{
             display: flex;

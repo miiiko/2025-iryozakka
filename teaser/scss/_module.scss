@@ -96,6 +96,12 @@
             @include m.max-screen(v.$tab) {
                 margin-bottom: 6%;
             }
+            span{
+                @include m.txt-mini();
+                &{
+                    color: rgba(v.$txt, .8);
+                }
+            }
         }
         h3{
             text-align: center;

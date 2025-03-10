@@ -62,13 +62,6 @@
                 margin-bottom: 4px;
             }
         }
-        // .txt{
-        //     &.contact{
-        //         > a{
-        //             @include m.txt();
-        //         }
-        //     }
-        // }
         &.guide{
             .txt{
                 @include m.mb_16px();
@@ -89,7 +82,7 @@
                             text-align: left;
                             padding: 8px 10px;
                             margin: 4px 8px;
-                            background: rgba(v.$secondary-dark, .2);
+                            background: rgba(v.$secondary-dark, .1);
                             border-radius: 8px;
                             .ul_inner{
                                 > span{

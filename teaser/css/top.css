@@ -169,8 +169,24 @@
 .contents .icon.fix {
   position: fixed;
 }
+.contents .mascot {
+  padding: 24px 0 32px;
+}
+.contents .mascot .button {
+  margin: 34px auto 0;
+}
+.contents .mascot .inner .txt {
+  width: 700px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 840px) {
+  .contents .mascot .inner .txt {
+    width: auto;
+  }
+}
 .contents .offer {
   padding: 24px 0 32px;
+  background: #00CCBB;
 }
 .contents .offer .button {
   margin: 34px auto 0;
@@ -185,7 +201,7 @@
   }
 }
 .contents .about {
-  background: #00CCBB;
+  background: #00A597;
   padding: 24px 0 32px;
 }
 .contents .about .inner .txt {
@@ -201,7 +217,6 @@
   margin: 34px auto 0;
 }
 .contents .outline {
-  background: #00A597;
   padding: 24px 0 32px;
 }
 .contents .outline .inner {

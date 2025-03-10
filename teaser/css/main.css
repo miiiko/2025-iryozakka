@@ -646,6 +646,17 @@ main .contents .inner .ttl {
     margin-bottom: 6%;
   }
 }
+.page .contents > .lead span {
+  font-size: 14px;
+}
+@media screen and (max-width: 840px) {
+  .page .contents > .lead span {
+    font-size: 12px;
+  }
+}
+.page .contents > .lead span {
+  color: rgba(48, 78, 76, 0.8);
+}
 .page .contents h3 {
   text-align: center;
   margin-bottom: 24px;

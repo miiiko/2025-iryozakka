@@ -94,7 +94,7 @@
   text-align: left;
   padding: 8px 10px;
   margin: 4px 8px;
-  background: rgba(0, 165, 151, 0.2);
+  background: rgba(0, 165, 151, 0.1);
   border-radius: 8px;
 }
 .contents .text_box.guide .table_list td .notice .ul_inner > span {
