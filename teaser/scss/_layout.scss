@@ -229,9 +229,46 @@ main{
 		@include m.max-screen(v.$sp) {
 			display: block;
 		}
+	}
+	&_nav{
+		width: calc(100% - 250px);
+		@include m.max-screen(v.$sp) {
+			width: auto;
+		}
+		.logo{
+			height: 60px;
+			@include m.max-screen(v.$sp) {
+				height: 40px;
+			}
+			img{
+				height: 100%;
+			}
+		}
+		.nav{
+			padding: 16px 16px 14px 16px;
+			@include m.max-screen(v.$sp) {
+				padding: 10px;
+			}
+			> ul{
+				display: flex;
+				gap: 16px;
+				flex-wrap: wrap;
+				@include m.max-screen(v.$sp) {
+					gap: 10px;
+				}
+			}
+		}
+	}
+	&_share{
+		width: 250px;
+		@include m.max-screen(v.$sp) {
+			width: auto;
+			margin-bottom: 5%;
+		}
 		.sns{
 			display: flex;
 			gap: 10px;
+			justify-content: flex-end;
 			@include m.max-screen(v.$sp) {
 				justify-content: center;
 				margin: 10px auto;
@@ -260,28 +297,48 @@ main{
 				}
 			}
 		}
-	}
-	&_nav{
-		.logo{
-			height: 60px;
-			@include m.max-screen(v.$sp) {
-				height: 40px;
-			}
-			img{
-				height: 100%;
-			}
-		}
-		.nav{
-			padding: 16px 16px 14px 16px;
-			@include m.max-screen(v.$sp) {
-				padding: 10px;
-			}
-			> ul{
-				display: flex;
-				gap: 16px;
+		.supporter{
+			&_ttl{
+				font-size: 12px;
 				@include m.max-screen(v.$sp) {
-					gap: 10px;
-					flex-wrap: wrap;
+					font-size: 10px;
+					text-align: center;
+					margin-bottom: 1%;
+				}
+			}
+			&_list{
+				display: flex;
+				align-items: center;
+				column-gap: 16px;
+				@include m.max-screen(v.$sp) {
+					justify-content: center;
+					column-gap: 4%;
+					width: 80%;
+					margin: 0 auto;
+				}
+				> li{
+					@include m.max-screen(v.$sp) {
+						a{
+							display: block;
+							text-align: center;
+						}
+					}
+				}
+				.fukuin{
+					@include m.max-screen(v.$sp) {
+						img{
+							height: 24px;
+							margin: 8px auto;
+						}
+					}
+				}
+				.lkmac{
+					img{
+						width: 60px;
+						@include m.max-screen(v.$sp) {
+							width: 40px;
+						}
+					}
 				}
 			}
 		}

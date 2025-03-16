@@ -456,37 +456,12 @@ main .contents .inner .ttl {
     display: block;
   }
 }
-.footer_info .sns {
-  display: flex;
-  gap: 10px;
+.footer_nav {
+  width: calc(100% - 250px);
 }
 @media screen and (max-width: 580px) {
-  .footer_info .sns {
-    justify-content: center;
-    margin: 10px auto;
-  }
-}
-.footer_info .sns .x a {
-  display: block;
-  padding: 4px 0;
-}
-.footer_info .sns .x a img {
-  height: 32px;
-}
-@media screen and (max-width: 580px) {
-  .footer_info .sns .x a img {
-    height: 24px;
-  }
-}
-.footer_info .sns .insta a {
-  display: block;
-}
-.footer_info .sns .insta a img {
-  height: 40px;
-}
-@media screen and (max-width: 580px) {
-  .footer_info .sns .insta a img {
-    height: 32px;
+  .footer_nav {
+    width: auto;
   }
 }
 .footer_nav .logo {
@@ -511,11 +486,97 @@ main .contents .inner .ttl {
 .footer_nav .nav > ul {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 580px) {
   .footer_nav .nav > ul {
     gap: 10px;
-    flex-wrap: wrap;
+  }
+}
+.footer_share {
+  width: 250px;
+}
+@media screen and (max-width: 580px) {
+  .footer_share {
+    width: auto;
+    margin-bottom: 5%;
+  }
+}
+.footer_share .sns {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 580px) {
+  .footer_share .sns {
+    justify-content: center;
+    margin: 10px auto;
+  }
+}
+.footer_share .sns .x a {
+  display: block;
+  padding: 4px 0;
+}
+.footer_share .sns .x a img {
+  height: 32px;
+}
+@media screen and (max-width: 580px) {
+  .footer_share .sns .x a img {
+    height: 24px;
+  }
+}
+.footer_share .sns .insta a {
+  display: block;
+}
+.footer_share .sns .insta a img {
+  height: 40px;
+}
+@media screen and (max-width: 580px) {
+  .footer_share .sns .insta a img {
+    height: 32px;
+  }
+}
+.footer_share .supporter_ttl {
+  font-size: 12px;
+}
+@media screen and (max-width: 580px) {
+  .footer_share .supporter_ttl {
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 1%;
+  }
+}
+.footer_share .supporter_list {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+@media screen and (max-width: 580px) {
+  .footer_share .supporter_list {
+    justify-content: center;
+    column-gap: 4%;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 580px) {
+  .footer_share .supporter_list > li a {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 580px) {
+  .footer_share .supporter_list .fukuin img {
+    height: 24px;
+    margin: 8px auto;
+  }
+}
+.footer_share .supporter_list .lkmac img {
+  width: 60px;
+}
+@media screen and (max-width: 580px) {
+  .footer_share .supporter_list .lkmac img {
+    width: 40px;
   }
 }
 .footer .copy {
