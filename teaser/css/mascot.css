@@ -129,11 +129,13 @@
     margin-bottom: 4%;
   }
 }
-.contents .text_box .accent {
+.contents .text_box .accent,
+.contents .text_box .gray {
   margin: 40px auto 0;
 }
 @media screen and (max-width: 840px) {
-  .contents .text_box .accent {
+  .contents .text_box .accent,
+  .contents .text_box .gray {
     margin-bottom: 5%;
   }
 }

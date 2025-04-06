@@ -121,7 +121,8 @@
                 }
             }
         }
-        .accent{
+        .accent,
+        .gray{
             margin: 40px auto 0;
             @include m.max-screen(v.$tab) {
                 margin-bottom: 5%;
