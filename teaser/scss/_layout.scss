@@ -190,6 +190,7 @@ main{
 			}
 			@include m.max-screen(v.$sp) {
 				width: 80%;
+				padding: 16px 16px 20px;
 			}
 			.ttl{
 				@include m.ttl-lv1();

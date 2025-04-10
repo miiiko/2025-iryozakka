@@ -112,6 +112,21 @@
 }
 
 .contents{
+    > section{
+        padding: 24px 0 32px;
+        @include m.max-screen(v.$sp) {
+            padding: 12px 0 24px;
+        }
+        &:nth-of-type(2n+1){
+            background: v.$secondary;
+        }
+        &:nth-of-type(3n){
+            background: v.$secondary-dark;
+        }
+        &:nth-of-type(5n){
+            background: v.$white;
+        }
+    }
     .icon{
         position: absolute;
         z-index: 10;
@@ -128,7 +143,6 @@
         }
     }
     .mascot{
-        padding: 24px 0 32px;
         .button{
             margin: 34px auto 0;
         }
@@ -143,8 +157,6 @@
         }
     }
     .offer{
-        padding: 24px 0 32px;
-        background: v.$secondary;
         .button{
             margin: 34px auto 0;
         }
@@ -159,8 +171,6 @@
         }
     }
     .about{
-        background: v.$secondary-dark;
-        padding: 24px 0 32px;
         .inner{
             .txt{
                 width: 700px;
@@ -175,8 +185,6 @@
         }
     }
     .outline{
-        // background: v.$secondary-dark;
-        padding: 24px 0 32px;
         .inner{
             display: flex;
             flex-direction: row-reverse;
@@ -215,6 +223,92 @@
                 @include m.max-screen(v.$sp) {
                     width: auto;
                     margin-bottom: 5%;
+                }
+            }
+        }
+    }
+    .exhibitors{
+        .list{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 24px 16px ;
+            @include m.max-screen(v.$tab) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @include m.max-screen(v.$sp) {
+                gap: 16px 10px;
+                grid-template-columns: 1fr 1fr;
+            }
+            @include m.max-screen(v.$se) {
+                grid-template-columns: 1fr;
+            }
+            > li{
+                border-radius: 8px;
+                display: grid;
+                grid-template-rows: subgrid;
+                grid-row: span 4;
+                gap: 0;
+                .ttl{
+                    font-size: 16px;
+                    margin-bottom: 0;
+                    display: flex;
+                    text-align: left;
+                    // align-items: center;
+                    @include m.max-screen(v.$sp) {
+                        font-size: 14px;
+                    }
+                    .no{
+                        background: v.$secondary-dark;
+                        color: v.$white;
+                        padding: 4px 10px;
+                        border-radius: 6px 0 0 0;
+                        vertical-align: middle;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+                        @include m.max-screen(v.$sp) {
+                            padding: 2px 6px;
+                        }
+                    }
+                    .name{
+                        padding: 4px 10px;
+                        font-size: 14px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+                        @include m.max-screen(v.$sp) {
+                            font-size: 12px;
+                            padding: 2px 6px;
+                        }
+                    }
+                }
+                // .img{
+                    // flex-grow: 3;
+                // }
+                .tag{
+                    // flex-grow: 2;
+                    font-size: 12px;
+                    margin: 8px 4px;
+                    color: v.$secondary;
+                    @include m.max-screen(v.$sp) {
+                        font-size: 10px;
+                        margin: 4px 2px;
+                    }
+                    >li{
+                        display: flex;
+                        &:before{
+                            content: '# ';
+                        }
+                    }
+                }
+                .sns{
+                    display: flex;
+                    column-gap: 10px;
+                    font-size: 18px;
+                    margin: 0 8px;
                 }
             }
         }
