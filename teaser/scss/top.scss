@@ -243,18 +243,28 @@
             @include m.max-screen(v.$se) {
                 grid-template-columns: 1fr;
             }
+            &.commit{
+                > li{
+                    .ttl{
+                        background: v.$secondary;
+                        color: v.$white;
+                        border-radius: 8px 8px 0 0;
+                    }
+                }
+            }
             > li{
                 border-radius: 8px;
                 display: grid;
+                grid-auto-columns: 100%;
                 grid-template-rows: subgrid;
                 grid-row: span 4;
                 gap: 0;
+                min-width: calc(100% / 3);
                 .ttl{
                     font-size: 16px;
                     margin-bottom: 0;
                     display: flex;
                     text-align: left;
-                    // align-items: center;
                     @include m.max-screen(v.$sp) {
                         font-size: 14px;
                     }
@@ -279,15 +289,16 @@
                         justify-content: center;
                         align-items: center;
                         height: 100%;
+                        word-break: break-all;
                         @include m.max-screen(v.$sp) {
                             font-size: 12px;
                             padding: 2px 6px;
                         }
                     }
                 }
-                // .img{
-                    // flex-grow: 3;
-                // }
+                .img{
+                    width: 100%;
+                }
                 .tag{
                     // flex-grow: 2;
                     font-size: 12px;
@@ -309,7 +320,99 @@
                     column-gap: 10px;
                     font-size: 18px;
                     margin: 0 8px;
+                    .ec{
+                        order: 1;
+                    }
+                    .site{
+                        order: 2;
+                    }
+                    .x{
+                        order: 3;
+                    }
+                    .insta{
+                        order: 4;
+                    }
                 }
+            }
+        }
+        .space_map{
+            margin: 80px auto;
+        }
+    }
+    .sponsor{
+        .list{
+            display: grid;
+            margin: 0 auto 60px;
+            li{
+                .logo{
+                    margin-bottom: 16px;
+                    display: grid;
+                    place-content: center;
+                }
+               .info{
+                text-align: center;
+               }
+            }
+        }
+        .premium{
+            .list{
+                width: 70%;
+            }
+        }
+        .gold{
+            .list{
+                width: 90%;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 24px;
+                > li{
+                    a{
+                        display: block;
+                        height: 100%;
+                        .logo{
+                            height: calc(100% - 2em - 16px);
+                        }
+                        .info{
+                            height: 2em;
+                        }
+                    }
+                }
+            }
+        }
+        .silver,
+        .coffee{
+            .list{
+                width: 45%;
+            }
+        }
+        .box{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+    .icon-ttl{
+        text-align: center;
+        margin-bottom: 24px;
+        @include m.ttl-lv2();
+        & {
+            position: relative;
+            padding-top: 34px;
+        }
+        @include m.max-screen(v.$tab) {
+            padding-top: 26px;
+            margin-bottom: 3%;
+        }
+        &:before{
+            content: '';
+            @include m.abs_center();
+            top: 0;
+            background: url(../img/page/icon_green.png) no-repeat center center /contain;
+            width: 35px;
+            height: 30px;
+            @include m.max-screen(v.$tab) {
+                width: 24px;
+                height: 28px
             }
         }
     }
