@@ -186,43 +186,68 @@
     }
     .outline{
         .inner{
-            display: flex;
-            flex-direction: row-reverse;
-            @include m.max-screen(v.$sp) {
-                display: block;
-            }
-            .info{
+            .mapinfo{
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 50%;
+                flex-direction: row-reverse;
                 @include m.max-screen(v.$sp) {
-                    margin: 0 auto;
-                    width: auto;
+                    display: block;
                 }
-                .date{
-                    dt{
-                        @include m.txt-mini();
-                        &{
-                            font-weight: 600;
+                .info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 50%;
+                    @include m.max-screen(v.$sp) {
+                        margin: 0 auto;
+                        width: auto;
+                    }
+                    .date{
+                        dt{
+                            @include m.txt-mini();
+                            &{
+                                font-weight: 600;
+                            }
+                        }
+                        dd{
+                            margin-bottom: 16px;
                         }
                     }
-                    dd{
-                        margin-bottom: 16px;
+                    .button{
+                        @include m.max-screen(v.$tab) {
+                            margin: 0 auto;
+                        }
                     }
                 }
-                .button{
-                    @include m.max-screen(v.$tab) {
-                        margin: 0 auto;
+                .map{
+                    width: 50%;
+                    text-align: center;
+                    @include m.max-screen(v.$sp) {
+                        width: auto;
+                        margin-bottom: 5%;
                     }
                 }
             }
-            .map{
-                width: 50%;
-                text-align: center;
-                @include m.max-screen(v.$sp) {
-                    width: auto;
-                    margin-bottom: 5%;
+            .photo{
+                display: flex;
+                gap: 16px;
+                margin-top: 40px;
+                @include m.max-screen(v.$tab) {
+                    margin-top: 8%;
+                    display: block;
+                    li{
+                        &:nth-of-type(2){
+                            margin-top: 5%;
+                        }
+                    }
+                }
+                .text{
+                    text-align: center;
+                    padding: 8px 4px;
+                    font-size: 14px;
+                    @include m.max-screen(v.$sp) {
+                        padding: 4px;
+                        font-size: 12px;
+                    }
                 }
             }
         }
